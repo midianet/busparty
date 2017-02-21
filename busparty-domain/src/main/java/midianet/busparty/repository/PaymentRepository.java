@@ -1,6 +1,6 @@
 package midianet.busparty.repository;
 
-import midianet.busparty.rep.Payment;
+import midianet.busparty.domain.Payment;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 

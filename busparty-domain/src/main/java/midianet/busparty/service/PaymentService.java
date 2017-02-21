@@ -1,7 +1,16 @@
 package midianet.busparty.service;
 
+import midianet.busparty.repository.PaymentRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
 /**
- * Created by marcosfernandocosta on 19/02/17.
+ * Service of payment
  */
+@Service
 public class PaymentService {
+
+    @Autowired
+    private PaymentRepository repository;
+
 }
