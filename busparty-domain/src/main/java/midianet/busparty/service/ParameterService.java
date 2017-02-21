@@ -14,6 +14,4 @@ public class ParameterService {
     @Autowired
     private ParameterRepository repository;
 
-
-
 }
