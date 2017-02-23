@@ -1,0 +1,27 @@
+
+
+
+        GGGGGGGGGGGGG                   iiii          /////                                      BBBBBBBBBBBBBBBBB                             tttt
+     GGG::::::::::::G                  i::::i        /////                                       B::::::::::::::::B                         ttt:::t
+   GG:::::::::::::::G                   iiii        /////                                        B::::::BBBBBB:::::B                        t:::::t
+  G:::::GGGGGGGG::::G                                                                            BB:::::B     B:::::B                       t:::::t
+ G:::::G       GGGGGG   ooooooooooo   iiiiiii   aaaaaaaaaaaaa      ssssssssss                      B::::B     B:::::B   ooooooooooo   ttttttt:::::ttttttt
+G:::::G               oo:::::::::::oo i:::::i   a::::::::::::a   ss::::::::::s                     B::::B     B:::::B oo:::::::::::oo t:::::::::::::::::t
+G:::::G              o:::::::::::::::o i::::i   aaaaaaaaa:::::ass:::::::::::::s                    B::::BBBBBB:::::B o:::::::::::::::ot:::::::::::::::::t
+G:::::G    GGGGGGGGGGo:::::ooooo:::::o i::::i            a::::as::::::ssss:::::s ---------------   B:::::::::::::BB  o:::::ooooo:::::otttttt:::::::tttttt
+G:::::G    G::::::::Go::::o     o::::o i::::i     aaaaaaa:::::a s:::::s  ssssss  -:::::::::::::-   B::::BBBBBB:::::B o::::o     o::::o      t:::::t
+G:::::G    GGGGG::::Go::::o     o::::o i::::i   aa::::::::::::a   s::::::s       ---------------   B::::B     B:::::Bo::::o     o::::o      t:::::t
+G:::::G        G::::Go::::o     o::::o i::::i  a::::aaaa::::::a      s::::::s                      B::::B     B:::::Bo::::o     o::::o      t:::::t
+ G:::::G       G::::Go::::o     o::::o i::::i a::::a    a:::::assssss   s:::::s                    B::::B     B:::::Bo::::o     o::::o      t:::::t    tttttt
+  G:::::GGGGGGGG::::Go:::::ooooo:::::oi::::::ia::::a    a:::::as:::::ssss::::::s                 BB:::::BBBBBB::::::Bo:::::ooooo:::::o      t::::::tttt:::::t
+   GG:::::::::::::::Go:::::::::::::::oi::::::ia:::::aaaa::::::as::::::::::::::s                  B:::::::::::::::::B o:::::::::::::::o      tt::::::::::::::t
+     GGG::::::GGG:::G oo:::::::::::oo i::::::i a::::::::::aa:::as:::::::::::ss                   B::::::::::::::::B   oo:::::::::::oo         tt:::::::::::tt
+        GGGGGG   GGGG   ooooooooooo   iiiiiiii  aaaaaaaaaa  aaaa sssssssssss                     BBBBBBBBBBBBBBBBB      ooooooooooo             ttttttttttt
+
+
+
+
+
+
+
+
