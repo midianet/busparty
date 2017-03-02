@@ -15,6 +15,7 @@ public class Person {
     private Date register;       // Registration date
     private Gender gender;       // Person gender
     private Bedroom bedroom;     // Room of the person
+    private boolean confirm;     // Flag confirm (pay)
 
 /*
     private boolean concorda;

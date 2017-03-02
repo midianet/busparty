@@ -21,7 +21,7 @@ import java.util.Optional;
 @Repository
 public class ParametroRepository {
 
-    private Logger log = Logger.getLogger(PessoaRepository.class);
+    private Logger log = Logger.getLogger(PersonRepository.class);
 
     @Autowired
     private NamedParameterJdbcTemplate jdbc;
