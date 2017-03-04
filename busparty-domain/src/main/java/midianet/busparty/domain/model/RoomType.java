@@ -1,4 +1,4 @@
-package midianet.latinoware.api.model;
+package midianet.busparty.domain.model;
 
 import lombok.Data;
 
@@ -9,5 +9,5 @@ import lombok.Data;
 public class RoomType {
     private Long id;              // Type idenfy
     private String description;   // Type description
-    private double ammount;       // Type ammount
+    private double price;         // price room
 }

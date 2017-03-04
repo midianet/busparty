@@ -1,8 +1,7 @@
-package midianet.latinoware.api.model;
+package midianet.busparty.domain.model;
 
 import lombok.Data;
 
-import java.math.BigDecimal;
 import java.util.Date;
 
 /**

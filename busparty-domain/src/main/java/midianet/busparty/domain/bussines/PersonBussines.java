@@ -1,7 +1,7 @@
-package midianet.latinoware.api.bussines;
+package midianet.busparty.domain.bussines;
 
-import midianet.latinoware.api.model.Person;
-import midianet.latinoware.api.repository.PersonRepository;
+import midianet.busparty.domain.model.Person;
+import midianet.busparty.domain.repository.PersonRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -30,11 +30,11 @@ public class PersonBussines {
     }
 
     public List<Person> listConfirmed(){
-        return repository.listAll().stream().filter(p -> p.isConfirm()).collect(Collectors.toList());
+        return repository.listAll().stream().filter(p -> p.isConfirmed()).collect(Collectors.toList());
     }
 
     public List<Person> listWaiting(){
-        return repository.listAll().stream().filter(p -> !p.isConfirm()).collect(Collectors.toList());
+        return repository.listAll().stream().filter(p -> !p.isConfirmed()).collect(Collectors.toList());
     }
 
     @Transactional

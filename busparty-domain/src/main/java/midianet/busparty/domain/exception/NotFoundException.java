@@ -1,4 +1,4 @@
-package midianet.latinoware.api.exception;
+package midianet.busparty.domain.exception;
 
 public class NotFoundException extends BussinesException {
 

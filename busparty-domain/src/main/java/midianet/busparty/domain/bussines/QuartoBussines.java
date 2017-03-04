@@ -1,13 +1,4 @@
-package midianet.latinoware.api.bussines;
-
-import midianet.latinoware.api.model.Bedroom;
-import midianet.latinoware.api.repository.PersonRepository;
-import midianet.latinoware.api.repository.QuartoRepository;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
-
-import java.util.Optional;
-import java.util.stream.Collectors;
+package midianet.busparty.domain.bussines;
 
 /**
  * Created by marcosfernandocosta on 21/09/16.

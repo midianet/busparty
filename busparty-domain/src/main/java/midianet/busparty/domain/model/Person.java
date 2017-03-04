@@ -1,4 +1,4 @@
-package midianet.latinoware.api.model;
+package midianet.busparty.domain.model;
 
 import lombok.Data;
 
@@ -15,7 +15,7 @@ public class Person {
     private Date register;       // Registration date
     private Gender gender;       // Person gender
     private Bedroom bedroom;     // Room of the person
-    private boolean confirm;     // Flag confirm (pay)
+    private boolean confirmed;   // Flag confirmed (pay)
 
 /*
     private boolean concorda;

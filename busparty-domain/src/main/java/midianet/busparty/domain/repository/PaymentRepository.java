@@ -1,8 +1,7 @@
-package midianet.latinoware.api.repository;
+package midianet.busparty.domain.repository;
 
-import midianet.latinoware.api.exception.InfraException;
-import midianet.latinoware.api.model.Payment;
-import midianet.latinoware.api.model.Person;
+import midianet.busparty.domain.exception.InfraException;
+import midianet.busparty.domain.model.Payment;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;

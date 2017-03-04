@@ -1,8 +1,8 @@
-package midianet.latinoware.api.repository;
+package midianet.busparty.domain.repository;
 
-import midianet.latinoware.api.exception.InfraException;
-import midianet.latinoware.api.model.Person;
-import midianet.latinoware.api.model.Bedroom;
+import midianet.busparty.domain.exception.InfraException;
+import midianet.busparty.domain.model.Gender;
+import midianet.busparty.domain.model.Person;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.EmptyResultDataAccessException;
@@ -13,7 +13,6 @@ import org.springframework.stereotype.Repository;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Timestamp;
 import java.util.*;
 
 @Repository
@@ -99,7 +98,8 @@ public class PersonRepository {
            .append("       pers_name,")
            .append("       pers_register,")
            .append("       pers_telegram,")
-           .append("       pers_confirm")
+           .append("       pers_confirm,")
+           .append("       gend_id")
            .append("  from tb_person ")
            .append(" where pers_telegram = :id");
         final Map<String,Object> param = new HashMap();
@@ -146,7 +146,8 @@ public class PersonRepository {
            .append("       pers_name,")
            .append("       pers_register,")
            .append("       pers_telegram,")
-           .append("       pers_confirm")
+           .append("       pers_confirm,")
+           .append("       gend_id")
            .append("  from tb_person")
            .append(" order by pers_register");
         try {
@@ -163,8 +164,14 @@ public class PersonRepository {
         person.setName    (rs.getString   ("pers_name"));
         person.setTelegram(rs.getLong     ("pers_telegram"));
         person.setRegister(rs.getTimestamp("pers_register"));
-        person.setConfirm (rs.getBoolean  ("pers_confirm"));
-
+        person.setConfirmed(rs.getBoolean  ("pers_confirm"));
+        Optional.ofNullable(rs.getInt("gend_id")).ifPresent(g -> {
+            if(g == 0){
+                person.setGender(Gender.FEMALE);
+            }else{
+                person.setGender(Gender.MALE);
+            }
+        });
 //        pessoa.setPagou         (rs.getBoolean  ("pess_pagou"));
 //        pessoa.setCerveja       (rs.getBoolean  ("pess_cerveja"));
 //        pessoa.setRefrigerante  (rs.getBoolean  ("pess_refrigerante"));

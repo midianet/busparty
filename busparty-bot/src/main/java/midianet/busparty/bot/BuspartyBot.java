@@ -1,9 +1,10 @@
 package midianet.busparty.bot;
 
-import midianet.latinoware.api.bussines.FinanceBussines;
-import midianet.latinoware.api.bussines.PersonBussines;
-import midianet.latinoware.api.model.Payment;
-import midianet.latinoware.api.model.Person;
+import midianet.busparty.domain.bussines.FinanceBussines;
+import midianet.busparty.domain.bussines.PersonBussines;
+import midianet.busparty.domain.model.Gender;
+import midianet.busparty.domain.model.Payment;
+import midianet.busparty.domain.model.Person;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -15,7 +16,6 @@ import org.telegram.telegrambots.api.objects.replykeyboard.InlineKeyboardMarkup;
 import org.telegram.telegrambots.api.objects.replykeyboard.buttons.InlineKeyboardButton;
 import org.telegram.telegrambots.bots.TelegramLongPollingBot;
 
-import java.math.BigDecimal;
 import java.text.NumberFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -196,6 +196,14 @@ public class BuspartyBot extends TelegramLongPollingBot {
         }
     }
 
+    private String makeIcon(final Gender gender){
+        if(gender.equals(Gender.FEMALE)){
+            return "\uD83D\uDC69";
+        }else{
+            return "\uD83D\uDC71";
+        }
+    }
+
     private void actionList(final Update update){
         try {
             final Long chatId  = update.getCallbackQuery().getMessage().getChatId();
@@ -204,10 +212,16 @@ public class BuspartyBot extends TelegramLongPollingBot {
             final List<Person> confirmedList = personBussines.listConfirmed();
             final List<Person> waitingList   = personBussines.listWaiting();
             names.append("Confirmados: ").append(confirmedList.size()).append("\n");
-            confirmedList.forEach(p -> names.append(p.getName().concat("\n")));
+            confirmedList.forEach(p -> {
+                Optional.ofNullable(p.getGender()).ifPresent(g -> names.append(makeIcon(g)));
+                names.append(p.getName().concat("\n"));
+            });
             names.append("\n");
             names.append("Em espera: ").append(waitingList.size()).append("\n");
-            waitingList.forEach(p -> names.append(p.getName().concat("\n")));
+            waitingList.forEach(p -> {
+                Optional.ofNullable(p.getGender()).ifPresent(g -> names.append(makeIcon(g)));
+                names.append(p.getName().concat("\n"));
+            });
             names.append("\n");
             names.append("Total: ").append(confirmedList.size() + waitingList.size());
             if(!update.getCallbackQuery().getMessage().getText().trim().equals(names.toString().trim())){

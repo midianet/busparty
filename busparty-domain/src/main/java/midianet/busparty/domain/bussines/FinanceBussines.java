@@ -1,8 +1,8 @@
-package midianet.latinoware.api.bussines;
+package midianet.busparty.domain.bussines;
 
-import midianet.latinoware.api.model.Payment;
-import midianet.latinoware.api.model.Person;
-import midianet.latinoware.api.repository.PaymentRepository;
+import midianet.busparty.domain.model.Payment;
+import midianet.busparty.domain.model.Person;
+import midianet.busparty.domain.repository.PaymentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

@@ -1,4 +1,4 @@
-package midianet.latinoware.api.model;
+package midianet.busparty.domain.model;
 
 import lombok.Data;
 
