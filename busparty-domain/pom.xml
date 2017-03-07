@@ -26,6 +26,12 @@
             <version>18.0</version>
         </dependency>
 
+        <dependency>
+            <groupId>io.javaslang</groupId>
+            <artifactId>javaslang</artifactId>
+            <version>2.0.2</version>
+        </dependency>
+
         <!--<dependency>-->
             <!--<groupId>commons-dbcp</groupId>-->
             <!--<artifactId>commons-dbcp</artifactId>-->
