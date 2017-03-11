@@ -1,0 +1,71 @@
+-- Sequence: person_pers_id_seq
+
+-- DROP SEQUENCE person_pers_id_seq;
+
+CREATE SEQUENCE person_pers_id_seq
+  INCREMENT 1
+  MINVALUE 1
+  MAXVALUE 9223372036854775807
+  START 1
+  CACHE 1;
+ALTER TABLE person_pers_id_seq
+  OWNER TO postgres;
+
+
+-- Sequence: tb_payment_paym_id_seq
+
+-- DROP SEQUENCE tb_payment_paym_id_seq;
+
+CREATE SEQUENCE tb_payment_paym_id_seq
+  INCREMENT 1
+  MINVALUE 1
+  MAXVALUE 9223372036854775807
+  START 1
+  CACHE 1;
+ALTER TABLE tb_payment_paym_id_seq
+  OWNER TO postgres;
+
+
+-- Table: tb_person
+
+-- DROP TABLE tb_person;
+
+CREATE TABLE tb_person
+(
+  pers_id integer NOT NULL DEFAULT nextval('person_pers_id_seq'::regclass),
+  pers_telegram bigint NOT NULL,
+  pers_name character varying(80) NOT NULL,
+  pers_register timestamp without time zone NOT NULL DEFAULT now(),
+  bedr_id bigint,
+  gend_id bigint,
+  pers_confirm boolean NOT NULL DEFAULT false,
+  CONSTRAINT person_pkey PRIMARY KEY (pers_id)
+)
+WITH (
+  OIDS=FALSE
+);
+ALTER TABLE tb_person
+  OWNER TO postgres;
+
+
+-- Table: tb_payment
+
+-- DROP TABLE tb_payment;
+
+CREATE TABLE tb_payment
+(
+  paym_id integer NOT NULL DEFAULT nextval('tb_payment_paym_id_seq'::regclass),
+  paym_date date NOT NULL DEFAULT now(),
+  paym_done date,
+  paym_ammount double precision NOT NULL,
+  pers_id bigint NOT NULL,
+  CONSTRAINT tb_payment_pkey PRIMARY KEY (paym_id),
+  CONSTRAINT fk_payment_person FOREIGN KEY (pers_id)
+      REFERENCES tb_person (pers_id) MATCH SIMPLE
+      ON UPDATE RESTRICT ON DELETE RESTRICT
+)
+WITH (
+  OIDS=FALSE
+);
+ALTER TABLE tb_payment
+  OWNER TO postgres;
