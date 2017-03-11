@@ -8,6 +8,7 @@ import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.util.UriComponentsBuilder;
 import java.util.ArrayList;
@@ -64,7 +65,7 @@ public class PersonController {
 //    @RequestMapping(value = "/{id}", method = RequestMethod.DELETE)
 //    @Transactional
 //    public ResponseEntity<Void> delete(@PathVariable("id") final Long id) {
-//        final Morador current = repository.findOne(id);
+//        final Person p = repository.f .findOne(id);
 //        if (current == null) {
 //            return new ResponseEntity(HttpStatus.NOT_FOUND);
 //        }

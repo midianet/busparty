@@ -114,31 +114,24 @@ public class PersonRepository {
         }
     }
 
-//    public Optional<Person> findById(final Long id){
-//        final StringBuilder sql = new StringBuilder();
-//        sql.append("select pess_id,")
-//                .append("       pess_nome,")
-//                .append("       pess_cadastro,")
-//                .append("       pess_pagou,")
-//                .append("       pess_cerveja,")
-//                .append("       pess_refrigerante,")
-//                .append("       pess_suco,")
-//                .append("       pess_ice,")
-//                .append("       pess_toddynho,")
-//                .append("       pess_coco,")
-//                .append("       quar_id,")
-//                .append("       tele_id")
-//                .append("  from tb_pessoa ")
-//                .append(" where pess_id = :id");
-//        final Map<String,Object> param = new HashMap();
-//        param.put("id",id);
-//        try {
-//            return Optional.ofNullable(jdbc.queryForObject(sql.toString(),param, this::mapRow));
-//        }catch(Exception e){
-//            log.error(e);
-//            throw new InfraException(e);
-//        }
-//    }
+    public Optional<Person> findById(final Long id){
+        final StringBuilder sql = new StringBuilder();
+        sql.append("select pers_id,")
+           .append("       pers_name,")
+           .append("       pers_register,")
+           .append("       pers_telegram,")
+           .append("       pers_confirm")
+           .append("  from tb_person ")
+           .append(" where pers_id = :id");
+        final Map<String,Object> param = new HashMap();
+        param.put("id",id);
+        try {
+            return Optional.ofNullable(jdbc.queryForObject(sql.toString(),param, this::mapRow));
+        }catch(Exception e){
+            log.error(e);
+            throw new InfraException(e);
+        }
+    }
 
     public List<Person> listAll(){
         final StringBuilder sql = new StringBuilder();
