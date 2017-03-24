@@ -241,7 +241,7 @@ public class BuspartyBot extends TelegramLongPollingBot {
         try {
             final Long chatId  = update.getCallbackQuery().getMessage().getChatId();
             final Integer messageId = update.getCallbackQuery().getMessage().getMessageId();
-            final String text = " Banco Bradesco \n Agência 2305 \n Conta Corrente 35041-9 \n Rodrigo Rodrigues da Costa \n CPF 855.066.051-53 \n Email rodrigorgvti@gmail.com \n whatsapp 62.9800-5224";
+            final String text = " Banco Caixa Econômica \n Agência 3621 \n Conta Corrente 24894-3 \n Marcos Fernando da Costa \n CPF 854.024.191-91 \n Email midianet@gmail.com \n whatsapp 62.98417-7762";
             if(!update.getCallbackQuery().getMessage().getText().trim().equals(text.trim())) {
                 final EditMessageText editText = new EditMessageText();
                 editText.setText(text);
